@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mohamed Nagi Fathallah - ML Engineer Portfolio</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; 
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background: #f0f2f5;
+      color: black;
+    }
+
+    a { color: #283e4a; 
+      text-decoration: none;
+     }
+    a:hover { 
+      text-decoration: underline;
+     }
+    header {
+      background: #283e4a;
+      color: #fff; 
+      padding: 20px 0; 
+      text-align: center;
+    }
+
+    header h1 { font-size: 2.5rem;
+    }
+
+    header p { 
+      margin: 10px 0; 
+      font-size: 1.1rem; 
+    }
+    nav { 
+      margin-top: 10px; 
+    }
+    nav a { 
+      margin: 0 15px; 
+      font-size: 1rem; 
+    }
+
+    .hero {
+      background: url('https://raw.githubusercontent.com/mohamednagi003/my-portfolio-assets/main/myIMG.jpg') no-repeat center center;
+      background-size: cover;  /* Ensures the image covers the section */
+      background-attachment: fixed; /* Optional, for parallax effect */
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 50px;
+      color: white;
+      text-shadow: 1px 1px 5px black;
+      position: relative;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.3); /* Reduce opacity */
+    }
+    .hero div {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+    }
+
+    .hero h1 { 
+      font-size: 3rem; 
+    }
+    .hero p { 
+      font-size: 1.2rem; 
+    }
+
+    section { 
+      padding: 40px 20px; 
+      max-width: 1100px; 
+      margin: auto; 
+    }
+    .section-title { 
+      text-align: center; 
+      margin-bottom: 30px; 
+    }
+    .section-title h2 {
+      font-size: 2rem;
+      border-bottom: 2px solid #283e4a;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    footer {
+      background: #283e4a;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+
+    .hero h1 { 
+      font-size: 3rem; 
+    }
+    .hero p { 
+      font-size: 1.2rem; 
+    }
+    section { padding: 40px 20px; max-width: 1100px; margin: auto; }
+    .section-title { text-align: center; margin-bottom: 30px; }
+    .section-title h2 {
+      font-size: 2rem; border-bottom: 2px solid #283e4a;
+      display: inline-block; padding-bottom: 5px;
+    }
+    .skills { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; }
+    .skill { background: #283e4a; color: #fff; padding: 10px 15px; border-radius: 20px; }
+    .card {
+      background: #fff; padding: 20px; margin-bottom: 20px;
+      border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .card a { display: block; margin-top: 10px; color: #007bff; cursor: pointer; }
+    .details { display: none; margin-top: 10px; }
+    footer { background: #283e4a; color: #fff; text-align: center; padding: 20px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mohamed Nagi Fathallah</h1>
+    <p>Computer Engineer | Machine Learning Specialist</p>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#publications">Publications</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <section class="hero" id="home">
+    <div>
+      <h1>Welcome!</h1>
+      <p>Building intelligent systems to transform data into insights.</p>
+      <a href="#projects">Explore My Work</a>
+    </div>
+  </section>
+  <section id="about">
+    <div class="section-title">
+      <h2>About Me</h2>
+    </div>
+    <p>I'm a Computer Engineer passionate about AI and data science. I specialize in deep learning, predictive modeling, and scalable system design...</p>
+    <h3>Technical Skills</h3>
+    <div class="skills">
+      <div class="skill">Python</div>
+      <div class="skill">TensorFlow</div>
+      <div class="skill">Machine Learning</div>
+      <div class="skill">Scikit-Learn</div>
+      <div class="skill">Data Analysis</div>
+      <div class="skill">Deep Learning</div>
+      <div class="skill">C++</div>
+      <div class="skill">Edge AI</div>
+      <div class="skill">Computer Vision</div>
+    </div>
+  </section>
+  <section id="projects">
+    <div class="section-title">
+      <h2>Projects</h2>
+    </div>
+    <div class="card">
+      <h3>Intelligent Image Recognition System</h3>
+      <p>Deep learning-based image classification using CNNs.</p>
+      <a onclick="toggleDetails('project1')">View Project Details</a>
+      <div id="project1" class="details">
+        <p>This project aims to build an intelligent image recognition system based on deep learning architecture, which is capable of identifying handwritten and printed digits with great precision. 
+
+          Overview
+          
+          The method of the system is built on the use of Convolutional Neural Networks (CNNs), a sophisticated deep learning technique specifically used for image classification. The system processes images of numbers and predicts the digits they contain, which can be used in applications like automated form processing, license plate recognition, and sorting of postal codes.
+          
+          Key Features
+          
+          Dataset: MNIST dataset for training (a large database of handwritten digits) and complemented with real images of numbers.
+          
+          Model Architecture: The CNN features multiple convolutional, a max pooling layer, batch normalization layer, and a dropout layer for enhanced generalization.
+          
+          Accuracy: Over 99% accuracy on the MNIST dataset and high accuracy on other datasets as well.
+          
+          Deployment: He implemented the model using TensorFlow Lite for the model optimization and deployment. This enables edge AI integration for efficient and quick real-time recognition.
+          
+          Application Areas: Check processing in banking, digit address recognition for postal services, and automatic toll collection systems.
+          
+          Technical Details
+          
+          Preprocessing: Using data normalization and image augmentation for improved robustness.
+          
+          Model Optimization: Transfer learning and data augmentation were used to improve performance.
+          
+          Deployment: The System
+          
+          </p>
+      </div>
+    </div>
+    <div class="card">
+      <h3>AI-Powered Quality Inspection for Manufacturing</h3>
+      <p>Industrial defect detection using computer vision.</p>
+      <a onclick="toggleDetails('project2')">View Project Details</a>
+      <div id="project2" class="details">
+        <p>This project focuses on automating defect detection in a given case of a manufacturing company through the use of Deep Learning and Computer Vision. The system automatically checks for scratches, cracks, surface misalignment, or other anomalies in real-time, and to a certain degree ensures that the quality is achieved with minimal human intervention. 
+
+          Main Functionalities
+          
+          Dynamic Visual Defect Inspection: Image processing through Artificial Intelligence for the immediate detection of flaws in the product. 
+          
+          Deep Learning Powered Models: Utilize industrial datasets with CNNs, YOLO, and Vision Transformers for training.
+          
+          Edge AI Deployment: Performed on NVIDIA Jetson or Raspberry Pi for fast, on-premise processing.
+          
+          Automated Alerting & Sorting: Smart defect tracking in Industrial IoT.
+          
+          Methodology
+          
+          Histogram Equalization for Preprocessing & Edge Detection.
+          
+          Defect classification using supervised & unsupervised learning techniques.
+          
+          Real-time optimization through TensorRT & ONNX.
+          
+          Examples & Results
+          
+          ✅ Tire Manufacturing: Side wall defects and Tread patterns abnormality identification. 
+          
+          ✅ Electronics & Automotive: Soldering faults on PCB and frames crack identification. 
+          
+          ✅ Effectiveness: Saves up to 70% in manual inspections and improves the overall product quality.
+          
+          ✅ Cost benefits: Reduces overall labor expenses and dovetailing production waste.
+          
+          🚀 Bettered manufacturing reliability whereby yielding results above 98% accuracy.
+          
+          </p>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Text Classification for Sentiment Analysis</h3>
+      <p>Natural Language Processing for classifying sentiment in texts.</p>
+      <a onclick="toggleDetails('project3')">View Project Details</a>
+      <div id="project3" class="details">
+        <p>This project leverages Natural Language Processing (NLP) and Machine Learning techniques to perform sentiment analysis on a dataset of product reviews, classifying them as positive, negative, or neutral. The goal is to help businesses understand customer sentiment and improve their products and services accordingly.
+  
+          <strong>Overview</strong>
+          
+          The system uses a combination of text pre-processing, tokenization, and vectorization techniques to convert text into features suitable for machine learning models. It then applies various classification algorithms, such as Logistic Regression, Naive Bayes, and deep learning-based LSTMs, to predict sentiment.
+          
+          <strong>Key Features</strong>
+          
+          - Dataset: A collection of product reviews from Amazon, annotated with sentiment labels.
+          - Techniques: TF-IDF, word embeddings, and RNNs for textual feature extraction.
+          - Model: LSTM and Transformer-based models for state-of-the-art results.
+          - Accuracy: Achieved an accuracy of 90% on the test set.
+          - Application Areas: Customer feedback analysis, social media monitoring, and brand sentiment tracking.
+          
+          <strong>Methodology</strong>
+          
+          - Data Preprocessing: Tokenization, stopword removal, and lemmatization.
+          - Model Training: LSTM and BERT models for deep learning.
+          - Evaluation: Cross-validation, confusion matrix, and F1 score.
+          
+          </p>
+        </div>
+      </div>
+  
+    <!-- New Project: House Price Prediction -->
+    <div class="card">
+      <h3>House Price Prediction with Regression Models</h3>
+      <p>Predicting house prices based on features like location, size, and amenities.</p>
+      <a onclick="toggleDetails('project4')">View Project Details</a>
+      <div id="project4" class="details">
+        <p>This project focuses on predicting the price of a house based on various features, such as location, size (square footage), number of rooms, and other amenities. By leveraging regression models, the system aims to help potential homebuyers make informed decisions based on market trends.
+  
+          <strong>Overview</strong>
+          
+          The system utilizes a dataset containing historical house prices and features from a real estate market. Regression models such as Linear Regression, Decision Trees, and Random Forests are employed to predict house prices based on input features.
+          
+          <strong>Key Features</strong>
+          
+          - Dataset: Kaggle's Housing Prices dataset, including features such as location, square footage, and neighborhood ratings.
+          - Model: Linear Regression, Random Forests, and XGBoost for predicting house prices.
+          - Performance: Achieved a mean absolute error (MAE) of $20,000.
+          - Application Areas: Real estate price prediction, investment analysis, and market trends forecasting.
+          
+          <strong>Methodology</strong>
+          
+          - Data Preprocessing: Handling missing values, scaling numerical features, and encoding categorical data.
+          - Model Training: Hyperparameter tuning for best model selection.
+          - Evaluation: Mean Squared Error (MSE), R-squared value, and cross-validation.
+          
+          </p>
+        </div>
+      </div>
+  </section>
+  </section>
+  <section id="publications">
+    <div class="section-title">
+      <h2>Publications & Research</h2>
+    </div>
+    <div class="card">
+      <h3>Optimizing Neural Networks for Image Recognition</h3>
+      <p>Published in JMLR.</p>
+      <a onclick="toggleDetails('pub1')">Read More</a>
+      <div id="pub1" class="details">
+        <p>Enhancing neural network topologies for extensive image identification tasks is the main goal of this research. In order to improve accuracy and computing efficiency, the study investigates effective training methods, model optimisation approaches, and architectural enhancements.
+
+          Key Contributions: New CNN Architectures: We present deep convolutional models that are lightweight and perform faster and more accurately than conventional CNNs.
+          Methods of Optimisation: improves model generalisation by using advanced activation functions (Swish, Mish), dropout, and batch normalisation.
+          Effective Training: Uses data augmentation, weight decay, and progressive learning rate scheduling to enhance convergence.
+          Model compression reduces the size of the model for deployment on edge devices by using quantisation, pruning, and knowledge distillation.
+          </p>
+      </div>
+    </div>
+  </section>
+  <section id="contact">
+    <div class="section-title">
+      <h2>Contact Me</h2>
+    </div>
+    <p>Email: <a href="mailto:nagimohamed023@gmail.com">nagimohamed023@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/mohamed-nagi-47a6582b7/">linkedin.com/in/mohamednagi</a></p>
+    <p>Phone: <a href="01211641988">01211641988</a></p>
+  </section>
+  <footer>
+    <p>&copy; 2025 Mohamed Nagi Fathallah. All rights reserved.</p>
+  </footer>
+  <script>
+    function toggleDetails(id) {
+      var element = document.getElementById(id);
+      element.style.display = element.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>
